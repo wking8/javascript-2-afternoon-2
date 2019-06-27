@@ -88,8 +88,8 @@ var nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
 
 function evenFinder(nums) {
   let arr = []
-  for (let i= 0; i < nums.length; i++) {
-    if(nums[i] % 2 === 0) {
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
       arr.push(nums[i])
     }
   }
@@ -123,8 +123,15 @@ var numbersArray = [1, 2, 34, 54, 55, 34, 32, 11, 19, 17, 54, 66, 13];
   and the second item in the array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
-
+function divider(numbersArray) {
+  even = numbersArray.filter(function (number) {
+    return number % 2 === 0
+  });
+  odd = numbersArray.filter(function (number) {
+    return number % 2 !== 0
+  });
+  return [even, odd];
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -145,7 +152,14 @@ var getRandomArbitrary = function () {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+function finder(arr) {
+  let randomNumber = getRandomArbitrary();
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === randomNumber) {
+      return true
+    }
+  }
+}
 
 
 
